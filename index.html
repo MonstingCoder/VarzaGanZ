@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+    
     <title>Belajar HTML Dasar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
 
-<style>
-
-    body {
-        background-color: black;
-        color: wheat;
-        font-family: 'Fira Code';
-        font-size: 180%;
-    }
-
-    iframe {
-        height: 500px;
-        width: 100%;
-        border: none;
-    }
-
-</style>
 </head>
-<body>
+
+<body id="body">
     
     <div>
         <p>berikut adalah contoh penggunaan iframe di html :</p>
-        <iframe src="./iframe.html" title="my profile">
+        <iframe id="frame1" src="./iframe.html" title="my profile">
             maaf iframe tidak dapat ditampilkan oleh browser anda
         </iframe>
     </div>
+    
+<script>
+    const frame1 = document.getElementById('frame1')
+    frame1.style.height = '500px'
+    frame1.style.width = '100%'
+    frame1.style.border = 'none'
 
+    const body = document.getElementById('body')
+    body.style.backgroundColor = 'black'
+    body.style.color = 'wheat'
+    body.style.fontFamily = 'Fira Code'
+    body.style.fontSize = '180%'
+    
+</script>
 </body>
 </html>
