@@ -9,24 +9,17 @@
 
 <body id="body">
     
-    <div>
-        <p>berikut adalah contoh penggunaan iframe di html :</p>
-        <iframe id="frame1" src="./iframe.html" title="my profile">
-            maaf iframe tidak dapat ditampilkan oleh browser anda
-        </iframe>
-    </div>
+    <p>hello world</p>
     
 <script>
-    const frame1 = document.getElementById('frame1')
-    frame1.style.height = '500px'
-    frame1.style.width = '100%'
-    frame1.style.border = 'none'
 
-    const body = document.getElementById('body')
-    body.style.backgroundColor = 'black'
-    body.style.color = 'wheat'
-    body.style.fontFamily = 'Fira Code'
-    body.style.fontSize = '180%'
+    const bodyStyle = document.getElementById('body').style
+    bodyStyle.backgroundColor = 'black'
+    bodyStyle.color = 'wheat'
+    bodyStyle.fontFamily = 'Fira Code'
+    bodyStyle.fontSize = '180%'
+    bodyStyle.margin = '20px'
+    bodyStyle.textAlign = 'center'
     
 </script>
 </body>
