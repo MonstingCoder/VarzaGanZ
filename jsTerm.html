@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="monsco ganz">
+    <meta name="keywords" content="html, css, javascript, fullstack, developer">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+    <title>Javascript Terminal</title>
+
+<style>
+    
+    body {
+        background-color: black;
+        color: rgb(0, 255, 0);
+        font-family: 'Fira Code';
+        font-size: 165%;
+    }
+
+</style>
+</head>
+<body>
+    
+    <div id="screen">
+        <p id="output">output<br><br></p>
+    </div>
+    
+<script>
+
+    const output = document.getElementById('output')
+    const NL = '<br>'
+    
+    function print(input) {output.innerHTML += input}
+    function println(input) {output.innerHTML += `${input}${NL}`}
+
+    for (let i = 1, j = 100; i <= j; i++) {println(`hello ke ${i}`)}
+
+</script>
+</body>
+</html>
