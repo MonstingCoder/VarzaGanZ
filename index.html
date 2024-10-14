@@ -1,48 +1,41 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
-    
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <title>Belajar HTML Dasar</title>
+
+    <title>Belajar Javascript Dasar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
-    
-<style>
-    
-    body {
-        background-color: black;
-        color: red;
-        font-family: 'Fira code', monospace;
-        font-size: 200%;
-        margin: 20px;
-        text-align: center;
-    }
-
-    #code {
-        color: cyan;
-        font-size: 100%;
-        text-align: justify;
-    }
-
-</style>
 </head>
-
-<body>
-
-    <p>Output</p>
+<body id="body">
     
-<pre id="code">
-<script>
-    const code = document.getElementById('code')
-    const print = (input) => {code.innerHTML += input}
-    const println = (input) => {code.innerHTML += `${input}\n`}
+    <p id="p">Output</p>
+
+<pre id="output"><script>
+    const out = document.getElementById('output')
+    const print = (input) => {out.innerHTML += input}
+    const println = (input) => {out.innerHTML += `${input}\n`}
 
     // CODE HERE :
-    println('word\t: alhamdulillah')
-    println('hello\t: world')
+    println('hello world')
+    println('hello world')
+    println('hello world')
+
+</script></pre>
+
+<script>
+
+    const bodyStyle = document.getElementById('body').style
+    bodyStyle.backgroundColor = 'black'
+    bodyStyle.color = 'cyan'
+    bodyStyle.fontFamily = 'Fira code, monospace'
+    bodyStyle.fontSize = '140%'
+
+    const pStyle = document.getElementById('p').style
+    pStyle.color = 'red'
+    pStyle.fontSize = '160%'
+    pStyle.textAlign = 'center'
 
 </script>
-</pre>
-    
 </body>
 </html>
