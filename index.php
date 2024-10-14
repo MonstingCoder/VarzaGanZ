@@ -1,64 +1,47 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    
     <meta charset="UTF-8">
-    <meta http-equiv="refresh" content="0.1">
-
-    <title>Belajar HTML Dasar</title>
+    <meta name="keywords" content="HTML, CSS, PHP">
+    <meta name="description" content="php roadmap">
+    <meta name="author" content="monsco">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="refresh" content="0.5">
+    
+    <title>Belajar PHP Dasar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
 
+<style>
+
+    body {
+        background-color: black;
+        color: cyan;
+        font-family: 'Fira Code', monospace;
+        font-size: 140%;
+        margin: 20px;
+    }
+
+    p {
+        color: red;
+        font-size: 160%;
+        text-align: center
+    }
+
+</style>
 </head>
+<body>
 
-<body id="body">
-    
-    <p id="termTitle">
-        Output<br>
-    </p>
-
-<pre id='code'>
+<p>Output</p>
+<pre>
 <?php
 
-$myName = 'monsco';
-$myName .= ' still';
-$myName .= " learning";
+$word = 'hello ';
+$word .= 'world';
 
-echo "myname is $myName and im still learning";
+echo $word;
 
 ?>
 </pre>
-
-<!-- <button id="fullscreenButton">Go Fullscreen</button> -->
     
-<script>
-
-    const bodyStyle = document.getElementById('body').style
-    bodyStyle.backgroundColor = 'black'
-    bodyStyle.color = 'cyan'
-    bodyStyle.fontFamily = 'Fira Code, monospace'
-    bodyStyle.fontSize = '160%'
-    bodyStyle.margin = '20px'
-    bodyStyle.textAlign = 'center'
-
-    const termTitle = document.getElementById('termTitle')
-    termTitle.style.color = 'red'
-    termTitle.style.fontSize = '140%'
-
-    const codeStyle = document.getElementById('code').style
-    codeStyle.fontSize = '120%'
-    codeStyle.textAlign = 'justify'
-
-    const button = document.getElementById('fullscreenButton');
-    button.addEventListener('click', () => {
-        if (!document.fullscreenElement) {
-            document.documentElement.requestFullscreen().catch(err => {
-                alert(`Error attempting to enable full-screen mode: ${err.message} (${err.name})`);
-            });
-        } else {
-            document.exitFullscreen();
-        }
-    });
-    
-</script>
 </body>
 </html>
