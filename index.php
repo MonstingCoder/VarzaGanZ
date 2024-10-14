@@ -2,6 +2,9 @@
 <html lang="id">
 <head>
     
+    <meta charset="UTF-8">
+    <meta http-equiv="refresh" content="0.1">
+
     <title>Belajar HTML Dasar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
 
@@ -18,9 +21,9 @@
 
 $myName = 'monsco';
 $myName .= ' still';
-$myName .= " learning\n";
+$myName .= " learning";
 
-echo "myname is $myName";
+echo "myname is $myName and im still learning";
 
 ?>
 </pre>
