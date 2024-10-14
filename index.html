@@ -4,23 +4,43 @@
     
     <title>Belajar HTML Dasar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
+    
+<style>
+    
+    body {
+        background-color: black;
+        color: red;
+        font-family: 'Fira code', monospace;
+        font-size: 200%;
+        margin: 20px;
+        text-align: center;
+    }
 
+    #code {
+        color: cyan;
+        font-size: 100%;
+        text-align: justify;
+    }
+
+</style>
 </head>
 
-<body id="body">
-    
-    <p>hello world</p>
-    
-<script>
+<body>
 
-    const bodyStyle = document.getElementById('body').style
-    bodyStyle.backgroundColor = 'black'
-    bodyStyle.color = 'wheat'
-    bodyStyle.fontFamily = 'Fira Code'
-    bodyStyle.fontSize = '180%'
-    bodyStyle.margin = '20px'
-    bodyStyle.textAlign = 'center'
+    <p>Output</p>
     
+<pre id="code">
+<script>
+    const code = document.getElementById('code')
+    const print = (input) => {code.innerHTML += input}
+    const println = (input) => {code.innerHTML += `${input}\n`}
+
+    // CODE HERE :
+    println('word\t: alhamdulillah')
+    println('hello\t: world')
+
 </script>
+</pre>
+    
 </body>
 </html>
