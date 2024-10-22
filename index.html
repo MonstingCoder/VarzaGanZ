@@ -17,9 +17,27 @@
     const println = (input) => {out.innerHTML += `${input}\n`}
 
     // CODE HERE :
-    println('hello world')
-    println('hello world')
-    println('hello world')
+    function isPrime(n) {
+
+        if (n == 2) return true
+        if ((n % 2) == 0) return false
+        if (n < 2) return false
+
+        for (let i = 3; i*i <= n; i += 2)
+        if ((n % i) == 0) return false
+
+        return true;
+
+    }
+    
+    for (let i = -20, j = 1_000; i <= j; i++) {
+        if ((i % 7) == 0) {
+            print(`${i}\t: ${isPrime(i)}\t|\n`)
+            continue
+        }
+
+        print(`${i}\t: ${isPrime(i)}\t| `)
+    }
 
 </script></pre>
 
