@@ -32,16 +32,9 @@
 </head>
 <body>
 
-<form method="post" action="<?= $_SERVER['PHP_SELF'];?>">
-    <label>Nama Depan :
-        <input type="text" name="fname">
-    </label><br>
-    <label>Nama Belakang :
-        <input type="text" name="lname">
-    </label><br>
-    <input type="submit">
-</form><br>
-<?= $_REQUEST['fname']; ?> <?= $_REQUEST['lname']; ?>
+<a href="/tmp/demo.php?subject=developer&status=ok">
+    TEST
+</a>
 
 <!--
 <p>Output</p>
