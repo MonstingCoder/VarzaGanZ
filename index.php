@@ -7,7 +7,7 @@
     <meta name="description" content="php roadmap">
     <meta name="author" content="monsco">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="refresh" content="2.5">
+    <!-- <meta http-equiv="refresh" content="2.5"> -->
     
     <title>Belajar PHP Dasar</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code&display=swap">
@@ -32,68 +32,34 @@
 </head>
 <body>
 
+<form method="post" action="<?= $_SERVER['PHP_SELF'];?>">
+    <label>Nama Depan :
+        <input type="text" name="fname">
+    </label><br>
+    <label>Nama Belakang :
+        <input type="text" name="lname">
+    </label><br>
+    <input type="submit">
+</form><br>
+<?= $_REQUEST['fname']; ?> <?= $_REQUEST['lname']; ?>
+
+<!--
 <p>Output</p>
 <pre>
-<?php
+    <?php
 
-$mobil = [
-    'avanza',
-    'xenia',
-    'yaris',
-    'jazz',
-];
-$cars = [
-    'brand' => 'nissan',
-    'model' => 'gtr nismo',
-    'year' => '1905',
-];
+    $myVar = 10;
+    var_dump($myVar);
 
-define('laptop', [[
-        'brand' => 'macbook pro 16 inch',
-        'chip' => 'm2 max 38 core gpu',
-        'memory' => '96 gb unified memory',
-        'storage' => '8 tb',
-    ], [
-        'brand' => 'asus zenbook',
-        'chip' => 'core ultra 7',
-        'memory' => '32 gb on chip',
-        'storage' => '1 tb',
-    ], [
-        'brand' => 'lenovo slim yoga',
-        'chip' => 'core i7 12600p',
-        'memory' => '16 gb lpddr5',
-        'storage' => '1 tb',
-    ], [
-        'brand' => 'acer helios predator',
-        'chip' => 'core i9 11950hx',
-        'memory' => '64 gb ddr5x',
-        'storage' => '2 tb',
-    ], [
-        'brand' => 'msi bravo',
-        'chip' => 'ryzen 5 5500h',
-        'memory' => '16 gb ddr4',
-        'storage' => '512 gb',
-    ],
-]);
-
-/*
-    echo "brand\t\tchip\t\t\tstorage";
-    for ($i = 0; $i < count(laptop); $i++) {
-        echo "\n" . laptop[$i]['brand'] . "\t\t" . laptop[$i]['chip'] . "\t\t" . laptop[$i]['storage'];
+    function change() {
+        $GLOBALS['myVar'] = 19;
     }
-*/
-// /*
-    foreach(laptop as $arr) {
-        foreach($arr as $key => $val) {
-            echo "$key\t: $val\n";
-        }
+    change();
+    var_dump($myVar);
 
-        echo "\n";
-    }
-// */
-
-?>
+    ?>
 </pre>
-    
+-->
+
 </body>
 </html>
