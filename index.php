@@ -32,27 +32,44 @@
 </head>
 <body>
 
-<a href="/tmp/demo.php?subject=developer&status=ok">
-    TEST
-</a>
+<form action="<?= $_SERVER['PHP_SELF'];?>" method="post">
+    <label>
+        nama <br>
+        <input name="nama" type="text" value="<?= null;?>">
+    </label><br>
+    <label>
+        umur <br>
+        <input name="umur" type="text" value="<?= null;?>">
+    </label><br>
+    <label>
+        waktu (saat ini) <br>
+        <input name="waktu" type="text" value="<?= null;?>">
+    </label><br><br>
+    <input type="submit" value="kirim">
+    <input type="reset" value="ulangi">
+</form>
+<!-- <?= $_GET['word'];?> add : http://127.0.0.1:8000/?word=hello%20world -->
 
-<!--
 <p>Output</p>
 <pre>
-    <?php
+<?php
 
-    $myVar = 10;
-    var_dump($myVar);
+$nama = htmlspecialchars($_POST['nama']);
+$umur = (int) htmlspecialchars($_POST['umur']);
+$waktu = htmlspecialchars($_POST['waktu']);
 
-    function change() {
-        $GLOBALS['myVar'] = 19;
-    }
-    change();
-    var_dump($myVar);
+function sapa(
+    $nama = 'admin',
+    $waktu = 'datang'
+) {
+    return htmlspecialchars("hallo $nama, selamat $waktu\n");
+}
 
-    ?>
+echo "default\t: ", sapa();
+echo "filled\t: ", sapa($nama, $waktu);
+
+?>
 </pre>
--->
 
 </body>
 </html>
