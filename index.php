@@ -70,6 +70,7 @@ echo "filled\t: ", sapa($nama, $waktu);
 
 ?>
 </pre>
+<input type="color" name="" id="">
 
 </body>
 </html>

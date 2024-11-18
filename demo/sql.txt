@@ -1,0 +1,57 @@
+CREATE TABLE customers (
+    customer_id VARCHAR(255) PRIMARY KEY,
+    customer_name VARCHAR(255),
+    segment VARCHAR(255),
+    age INT,
+    country VARCHAR(255),
+    city VARCHAR(255),
+    state VARCHAR(255),
+    postal_code INT,
+    region VARCHAR(255)
+);
+
+
+INSERT INTO customers (customer_id, customer_name, segment, age, country, city, state, postal_code, region)
+VALUES
+('CUST001', 'John Doe', 'Retail', 35, 'USA', 'New York', 'NY', 10001, 'North America'),
+('CUST002', 'Jane Smith', 'Wholesale', 28, 'Canada', 'Toronto', 'ON', 12345, 'North America'),
+('CUST003', 'Michael Johnson', 'Retail', 42, 'UK', 'London', 'England', 56789, 'Europe'),
+('CUST004', 'Emily Davis', 'Retail', 30, 'Australia', 'Sydney', 'NSW', 2000, 'Oceania'),
+('CUST005', 'Daniel Brown', 'Wholesale', 45, 'Germany', 'Berlin', 'Berlin', 10115, 'Europe'),
+('CUST006', 'Olivia Martinez', 'Retail', 39, 'Mexico', 'Mexico City', 'CDMX', 01000, 'North America'),
+('CUST007', 'James Wilson', 'Wholesale', 51, 'France', 'Paris', 'Ile-de-France', 75001, 'Europe'),
+('CUST008', 'Sophia Anderson', 'Retail', 27, 'Brazil', 'São Paulo', 'SP', 01000, 'South America'),
+('CUST009', 'William Taylor', 'Wholesale', 50, 'India', 'Mumbai', 'MH', 400001, 'Asia'),
+('CUST010', 'Mia White', 'Retail', 33, 'Japan', 'Tokyo', 'Tokyo', 100-0001, 'Asia'),
+('CUST011', 'Lucas Harris', 'Wholesale', 37, 'South Africa', 'Cape Town', 'Western Cape', 8000, 'Africa');
+
+SELECT * FROM customers;
+
+SELECT customer_id, customer_name, segment, age, country
+FROM customers
+WHERE country IN ('Brazil', 'India', 'Japan', 'Germany');
+
+
+SELECT customer_id, customer_name, segment, age, country
+FROM customers
+WHERE country IN ('Brazil', 'India', 'Japan', 'Germany')
+AND customer_name LIKE '%a%';
+
+SELECT * FROM customers
+ORDER BY customer_name DESC;
+
+________________________________________________________
+
+INSERT INTO customers (customer_id, customer_name, segment, age, country, city, state, postal_code, region)
+VALUES
+('CUST012', 'Reyhan Smith', 'Wholesale', 28, 'Canada', 'Toronto', 'ON', 12345, 'North America'),
+('CUST013', 'Fuad Markopolo', 'Retail', 42, 'UK', 'London', 'England', 56789, 'Europe'),
+('CUST014', 'Sukarto Hermansyah', 'Retail', 30, 'Australia', 'Sydney', 'NSW', 2000, 'Oceania'),
+('CUST015', 'Suharno Urip', 'Wholesale', 45, 'Germany', 'Berlin', 'Berlin', 10115, 'Europe'),
+('CUST016', 'Nurul Yakin', 'Retail', 39, 'Mexico', 'Mexico City', 'CDMX', 01000, 'North America'),
+('CUST017', 'Mamat', 'Wholesale', 51, 'France', 'Paris', 'Ile-de-France', 75001, 'Europe'),
+('CUST018', 'El Kelajuan', 'Retail', 27, 'Brazil', 'São Paulo', 'SP', 01000, 'South America'),
+('CUST019', 'Jaman Gawul', 'Wholesale', 50, 'India', 'Mumbai', 'MH', 400001, 'Asia'),
+('CUST020', 'Walter Wait', 'Retail', 33, 'Japan', 'Tokyo', 'Tokyo', 100-0001, 'Asia'),
+('CUST021', 'Danil Kukurela', 'Wholesale', 37, 'South Africa', 'Cape Town', 'Western Cape', 8000, 'Africa'),
+('CUST022', 'Salmet Riyadhi', 'Retail', 35, 'USA', 'New York', 'NY', 10001, 'North America');
