@@ -1,0 +1,21 @@
+* {
+    background-color: black;
+    color: aqua;
+    font-family: 'Fira Code', monospace;
+    font-size: 130%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.title {
+    color: red;
+    font-weight: bold;
+    margin: 2%;
+    text-align: center;
+}
+
+.output {
+    color: aqua;
+    font-size: 55%;
+    font-weight: lighter;
+}
