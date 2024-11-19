@@ -1,0 +1,20 @@
+body {
+    background-color: black;
+    color: aqua;
+    font-family: 'Fira Code', monospace;
+    font-size: 130%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.title {
+    color: red;
+    font-size: 160%;
+    font-weight: bold;
+    margin-block: 5%;
+    text-align: center;
+}
+
+.playground {
+    margin-inline: 2.5%;
+}
