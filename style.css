@@ -42,7 +42,7 @@ body {
 }
 
 .others {
-    background-color: white;
+    background-color: wheat;
     border-radius: 10px;
     color: black;
     font-family: Arial, Helvetica, sans-serif;
@@ -60,6 +60,13 @@ body {
 
 .result {
     margin-block: 2%;
+}
+.result table {
+    width: 65%;
+}
+.result th {
+    border-bottom: solid 2px;
+    padding-inline: 2%;
 }
 
 .title {

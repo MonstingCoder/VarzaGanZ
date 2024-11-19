@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div class="title">
     OUTPUT
 </div>
@@ -82,11 +81,26 @@
         <h1>
             Data Siswa
         </h1>
-        <?php foreach ($_POST as $p):?>
-            <p>
-                <?= $p?>
-            </p>
-        <?php endforeach;?> <!-- TUGAS : BUAT OUTPUT DALAM BENTUK TABEL -->
+        <table>
+            <thead>
+                <tr>
+                    <?php foreach ($_POST as $key => $value):?>
+                        <th>
+                            <?= $key?>
+                        </th>
+                    <?php endforeach;?>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <?php foreach ($_POST as $k):?>
+                        <td>
+                            <?= $k?>
+                        </td>
+                    <?php endforeach;?>
+                </tr>
+            </tbody>
+        </table>
     </div>
 </div>
 </body>
